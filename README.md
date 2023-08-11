@@ -11,8 +11,8 @@ BOOL Stat;
 LPVOID pfn = GetProcAddress(LoadLibraryA("Ole32.dll"), "CoCreateInstance");   
 if (MH_Initialize() == MB_OK)   
 {   
-    MH_CreateHook(pfn, &CoCreateInstanceHook, reinterpret_cast<void**>(&g_pOldCoCreateInstance));   
-    MH_EnableHook(pfn);   
+    &emsp; MH_CreateHook(pfn, &CoCreateInstanceHook, reinterpret_cast<void**>(&g_pOldCoCreateInstance));   
+    &emsp; MH_EnableHook(pfn);   
 }   
    
 ##  停止hook与卸载   
